@@ -1,0 +1,21 @@
+{
+  "name": "mernd",
+  "version": "1.0.0",
+  "description": "MongoDB Express React NodeJS Docker",
+  "main": "index.js",
+  "dependencies": {
+    "concurrently": "^5.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "server": "docker-compose up",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "prebuild": "rd /s /q .\\server\\build",
+    "build": "npm run build --prefix client",
+    "postbuild": "move .\\client\\build server/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "foxival",
+  "license": "ISC"
+}
