@@ -1,7 +1,6 @@
-import express, {Request, Response} from "express";
+import express from "express";
 import { check } from "express-validator";
 import Login from "../../application/Auth/Login";
-
 
 
 //Init router
@@ -18,6 +17,5 @@ router.post(
   ],
   Login
 );
-
 
 export default router;

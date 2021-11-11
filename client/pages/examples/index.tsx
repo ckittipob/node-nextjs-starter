@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import ModalContainer from "@/components/ModalContainer";
-import { API_URL } from "@/config/index";
+import { API_CLIENT, API_URL } from "@/config/index";
 import { AppProps } from "next/dist/shared/lib/router/router";
 import React, { useState } from "react";
 import { IExample } from "./example-model";
@@ -27,7 +27,7 @@ const ExamplePage = ({ examples }: IProps) => {
   };
 
   const confirmDelete = async () => {
-    const res = await fetch(`${API_URL}/api/examples/${delExample}`, {
+    const res = await fetch(`${API_CLIENT}/api/examples/${delExample}`, {
       method: "Delete",
       headers: {
         'Content-type': 'application/json',

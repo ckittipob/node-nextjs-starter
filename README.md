@@ -6,15 +6,10 @@
 # Usage
 cd into project directory
 
-### Setup & Run Backend
+### Setup
 
 ```sh
 docker-compose up --build
-```
-### Run Frontend
-```sh
-cd client
-npm run dev
 ```
 
 Open http://localhost:3000 with your browser to explore application.

@@ -24,7 +24,7 @@ const Create = async (req: Request, res: Response) => {
     });
 
     await example.save();
-    res.json({ example });
+    res.status(201).json({ example });
   } catch (err) {
     //Error Handling
     console.error(err);

@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import NumberInput from "@/components/NumberInput";
 import TextInput from "@/components/TextInput";
-import { API_URL } from "@/config/index";
+import { API_CLIENT, API_URL } from "@/config/index";
 import Cookies from "js-cookie";
 import { AppProps } from "next/app";
 import router from "next/router";
@@ -41,7 +41,7 @@ const EditExamplePage = ({example}: IProps) => {
   },[example])
   const handleFinalFormSubmit = async (values: any) => {
       
-    const res = await fetch(`${API_URL}/api/examples/${example._id}`, {
+    const res = await fetch(`${API_CLIENT}/api/examples/${example._id}`, {
       method: 'PUT',
       headers: {
         'Content-type': 'application/json',

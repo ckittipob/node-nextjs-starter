@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import NumberInput from "@/components/NumberInput";
 import TextInput from "@/components/TextInput";
-import { API_URL } from "@/config/index";
+import { API_CLIENT, API_URL } from "@/config/index";
 import Cookies from "js-cookie";
 import router from "next/router";
 import React, { useState } from "react";
@@ -37,7 +37,7 @@ const AddExamplePage = () => {
 
     console.log(newExample);
 
-    const res = await fetch(`${API_URL}/api/examples`, {
+    const res = await fetch(`${API_CLIENT}/api/examples`, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',

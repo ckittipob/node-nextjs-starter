@@ -21,6 +21,16 @@ services:
     depends_on:
       - api_mongo
 
+  client:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./client
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+      - /app/.next
 
   api_mongo:
     image: mongo:latest

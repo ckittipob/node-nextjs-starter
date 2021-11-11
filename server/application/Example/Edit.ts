@@ -34,7 +34,7 @@ const Edit = async (req: Request, res: Response) => {
     example.number = newExample.number ?? example.number;
 
     await example.save();
-    res.json({ example });
+    res.status(200).json({ example });
   } catch (err) {
     //Error Handling
     console.error(err);

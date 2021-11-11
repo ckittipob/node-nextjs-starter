@@ -19,7 +19,7 @@ const Delete = async (req: Request, res: Response) => {
       await Example.findOneAndDelete({_id: req.params.id}) 
 
       //Return
-      res.json({ msg: 'Example deleted' });
+      res.status(204).json({ msg: 'Example deleted' });
 
     } catch (err) {
       //Error Handling
